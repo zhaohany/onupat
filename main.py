@@ -2,6 +2,7 @@ import streamlit as st
 from transformers import pipeline, set_seed
 import json
 import random
+import logging
 
 generator = pipeline('text-generation', model='gpt2')
 
@@ -9,17 +10,21 @@ with open('prompt.json') as json_file:
     promt_data = json.load(json_file)
 
 def get_promt(key):
+    logging.info('get promt for %s',key)
     return random.choice(promt_data[key])["description"]
 
 
 def select_templates():
+    logging.info('get promt template')
     return "Once upon a time, in <location>, there lived a <char_prop> <char_job> named <char_name>."
 
 def generate_story(story_promt):
     try:
-        generated_text = generator(story_promt, max_length=150, num_return_sequences=1)
+        logging.info('generate story with prompt')
+        generated_text = generator(story_promt, max_length=100, num_return_sequences=1)
         return generated_text[0]['generated_text'].rsplit('.', 1)[0]
     except:
+        logging.error('fail generate story with prompt')
         return story_promt
 
 
@@ -34,6 +39,7 @@ if generate:
     story_prompt = story_prompt.replace("<char_prop>",get_promt("properties"))
     story_prompt = story_prompt.replace("<char_job>",get_promt("jobs"))
     story_prompt = story_prompt.replace("<char_name>",char_name)
+    logging.info('Done getting prompt %s',story_prompt)
     story_text = generate_story(story_prompt)+"."
 
 
