@@ -11,7 +11,11 @@ with open('prompt.json') as json_file:
 
 def get_promt(key):
     logging.info('get promt for %s',key)
-    return random.choice(promt_data[key])["description"]
+    if key == 'locations':
+        return random.choice(promt_data[key])["name"]
+    else:
+        return random.choice(promt_data[key])["description"]
+
 
 
 def select_templates():
@@ -21,7 +25,7 @@ def select_templates():
 def generate_story(story_promt):
     try:
         logging.info('generate story with prompt')
-        generated_text = generator(story_promt, max_length=100, num_return_sequences=1)
+        generated_text = generator(story_promt, max_length=50, num_return_sequences=1)
         return generated_text[0]['generated_text'].rsplit('.', 1)[0]
     except:
         logging.error('fail generate story with prompt')
