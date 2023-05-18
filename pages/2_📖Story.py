@@ -4,6 +4,8 @@ import json
 import random
 import logging
 
+st.set_page_config(page_title="Story", page_icon="open_book")
+
 generator = pipeline('text-generation', model='gpt2')
 
 with open('prompt.json') as json_file:

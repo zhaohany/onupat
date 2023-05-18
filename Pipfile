@@ -7,6 +7,8 @@ name = "pypi"
 streamlit = "*"
 transformers = "*"
 tensorflow = "*"
+streamlit-option-menu = "*"
+streamlit-lottie = "*"
 
 [dev-packages]
 
