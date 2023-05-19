@@ -65,8 +65,6 @@ with tcol2:
     Data Analytics  
     Marketing Research  
     ''')
-
-    st.divider()
     st.write("""<div style="width:100%;text-align:center;"><a href="https://www.linkedin.com/in/weichen328" style="float:center"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="22px"></img></a></div>""", unsafe_allow_html=True)
     
 with tcol3:
@@ -84,8 +82,6 @@ with tcol2:
     Coordination  
     Organization  
     ''')
-
-    st.divider()
     st.write("""<div style="width:100%;text-align:center;"><a href="https://www.linkedin.com/in/mingyang-xiao-3173a3159" style="float:center"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="22px"></img></a></div>""", unsafe_allow_html=True)
     
 with tcol3:
@@ -109,8 +105,6 @@ with tcol2:
     Stress Reduction  
     Team Morale Boost
     ''')
-
-    st.divider()
 
 with tcol3:
     st.image(streamlit_woody,caption='Woody')
