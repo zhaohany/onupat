@@ -5,7 +5,7 @@ import random
 import logging
 import requests
 
-st.set_page_config(page_title="Story", page_icon="open_book")
+st.set_page_config(page_title="Fairytalegenerator", page_icon="open_book")
 
 API_URL = "https://api-inference.huggingface.co/models/gpt2-large"
 headers = {"Authorization": "Bearer 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"}

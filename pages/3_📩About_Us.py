@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 st.set_page_config(
-    page_title="About Us",
+    page_title="Fairytalegenerator",
     page_icon="envelope_with_arrow",
 )
 

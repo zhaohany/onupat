@@ -6,7 +6,7 @@ import json
 from streamlit_lottie import st_lottie
 
 st.set_page_config(
-    page_title="Home",
+    page_title="Fairytalegenerator",
     page_icon="european_castle",
 )
 
