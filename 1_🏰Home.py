@@ -31,9 +31,9 @@ with tcol2:
  
 
 
-# video_file = open(script_dir+'/resources/test.mp4', 'rb')
-# video_bytes = video_file.read()
-# st.video(video_bytes)
+video_file = open(script_dir+'/resources/intro.mp4', 'rb')
+video_bytes = video_file.read()
+st.video(video_bytes)
 
 st.caption('Powering Innovations: Unleashing the Technology Behind Our Website')
 col1, col2, col3, col4, col5, col6 = st.columns(6)

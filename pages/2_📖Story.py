@@ -7,7 +7,7 @@ import requests
 
 st.set_page_config(page_title="Story", page_icon="open_book")
 
-API_URL = "https://api-inference.huggingface.co/models/gpt2"
+API_URL = "https://api-inference.huggingface.co/models/gpt2-large"
 headers = {"Authorization": "Bearer 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"}
 
 def query(payload):
