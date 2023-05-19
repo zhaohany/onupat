@@ -57,7 +57,7 @@ tcol1, tcol2, tcol3= st.columns(3)
 with tcol1:
     code = '''
     B.S Economics & Retail from UW Madison  
-    M.Eng ORIE from COrnell U
+    M.Eng ORIE from Cornell U
     3+ Years in Pharmaceutical Industry'''
     st.code(code, language='bash')
 
