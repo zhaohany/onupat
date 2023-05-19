@@ -40,8 +40,6 @@ with tcol2:
     Infrastructure  
     Backend Development
     ''')
-
-    st.divider()
     st.write("""<div style="width:100%;text-align:center;"><a href="https://www.linkedin.com/in/zhaohan-yan" style="float:center"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="22px"></img></a></div>""", unsafe_allow_html=True)
     
 with tcol3:
@@ -50,7 +48,7 @@ with tcol3:
     M.S.E ECE from Johns Hopkins U
     3+ Years in Tech Industry'''
     st.code(code, language='bash')
-
+st.divider()
 #wei
 streamlit_wei = Image.open(script_dir+'/../resources/wei.jpg')
 tcol1, tcol2, tcol3= st.columns(3)
@@ -73,7 +71,7 @@ with tcol2:
     
 with tcol3:
     st.image(streamlit_wei,caption='Wei Chen')
-
+st.divider()
 #mingyang
 streamlit_mingyang = Image.open(script_dir+'/../resources/mingyang.jpg')
 tcol1, tcol2, tcol3= st.columns(3)
@@ -95,7 +93,7 @@ with tcol3:
     B.S BAIT from Rutgers U   
     2+ Years in Management Consulting'''
     st.code(code, language='bash')
-
+st.divider()
 #woody
 streamlit_woody = Image.open(script_dir+'/../resources/woody.jpg')
 tcol1, tcol2, tcol3= st.columns(3)
@@ -116,7 +114,7 @@ with tcol2:
 
 with tcol3:
     st.image(streamlit_woody,caption='Woody')
-
+st.divider()
 st.caption("Our Footprint")
 mcol1,mcol2, mcol3 = st.columns(3)
 with mcol1:
