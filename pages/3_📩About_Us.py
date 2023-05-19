@@ -113,8 +113,7 @@ with tcol2:
     ''')
 
     st.divider()
-    st.write("""<div style="width:100%;text-align:center;"><a href="" style="float:center"><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="22px"></img></a></div>""", unsafe_allow_html=True)
-    
+        
 with tcol3:
     st.image(streamlit_woody,caption='Woody')
 
