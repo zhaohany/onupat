@@ -3,10 +3,17 @@ from transformers import pipeline, set_seed
 import json
 import random
 import logging
+import requests
 
 st.set_page_config(page_title="Story", page_icon="open_book")
 
-generator = pipeline('text-generation', model='gpt2')
+API_URL = "https://api-inference.huggingface.co/models/gpt2"
+headers = {"Authorization": "Bearer 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"}
+
+def query(payload):
+    data = json.dumps(payload)
+    response = requests.request("POST", API_URL, headers=headers, data=data)
+    return json.loads(response.content.decode("utf-8"))
 
 with open('prompt.json') as json_file:
     promt_data = json.load(json_file)
@@ -18,8 +25,6 @@ def get_promt(key):
     else:
         return random.choice(promt_data[key])["description"]
 
-
-
 def select_templates():
     logging.info('get promt template')
     return "Once upon a time, in <location>, there lived a <char_prop> <char_job> named <char_name>."
@@ -27,8 +32,9 @@ def select_templates():
 def generate_story(story_promt):
     try:
         logging.info('generate story with prompt')
-        generated_text = generator(story_promt, max_length=50, num_return_sequences=1)
-        return generated_text[0]['generated_text'].rsplit('.', 1)[0]
+        generated_text = query({"inputs": story_promt,"parameters":{"max_new_tokens":150}})
+        return generated_text[0]['generated_text']
+        # .rsplit('.', 1)[0]
     except:
         logging.error('fail generate story with prompt')
         return story_promt
