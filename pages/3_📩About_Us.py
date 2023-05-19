@@ -113,7 +113,7 @@ with tcol2:
     ''')
 
     st.divider()
-        
+
 with tcol3:
     st.image(streamlit_woody,caption='Woody')
 
