@@ -134,7 +134,7 @@ st.caption("Support Us")
 st.write("Enjoying our application?")
 st.write(" Your generous donations can contribute to the longevity of our web service, allowing us to continue providing a seamless experience.")
 
-st.write("""<div style="width:100%;text-align:center;"><a href="https://gofund.me/3f04cdb5/" style="float:center"><img src="https://1000logos.net/wp-content/uploads/2023/01/GoFundMe-Logo-2018.png" width="100px"></img></a></div>""", unsafe_allow_html=True)
+st.write("""<div style="width:100%;text-align:center;"><a href="https://gofund.me/09597477" style="float:center"><img src="https://1000logos.net/wp-content/uploads/2023/01/GoFundMe-Logo-2018.png" width="100px"></img></a></div>""", unsafe_allow_html=True)
 
 
 
