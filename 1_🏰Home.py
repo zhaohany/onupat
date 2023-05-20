@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import shutil
 
 def inject_ga():
-    GA_ID = "G-RC807JENT2"
+    GA_ID = "google_analytics"
 
 
     GA_JS = """
