@@ -9,7 +9,6 @@ transformers = "*"
 tensorflow = "*"
 streamlit-option-menu = "*"
 streamlit-lottie = "*"
-bs4 = "*"
 
 [dev-packages]
 
