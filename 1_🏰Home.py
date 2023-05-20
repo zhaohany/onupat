@@ -22,6 +22,7 @@ def inject_ga():
 
         gtag('config', 'G-RC807JENT2');
       </script>
+      <meta name="google-site-verification" content="JSXvvpNZ6wcizZbxH7tzCfENZ46N1l2QSo56OGjgMYE" />
     """
 
     # Insert the script in the head tag of the static template inside your virtual
